@@ -1,0 +1,50 @@
+body {
+  background-color: #222;
+  overflow-y: hidden;
+}
+
+*{
+  text-decoration: none;
+}
+
+.container{
+  width: 100%;
+}
+
+.text{
+  background-color: rgba(211, 211, 211, 0.61);
+  width: 75%;
+  margin: 0 auto;
+  margin-top: 100px;
+  padding-top: 20px;
+  padding-bottom: 300px;
+}
+
+.historia{
+  width: 100%;
+  text-align: justify;
+}
+
+.eleccion{
+  text-align: center;
+  font-weight: bold;
+  
+}
+
+.eleccion:first-of-type{
+  margin-top: 50px;
+}
+.eleccion a{
+  color: black;
+}
+
+.historia p{
+  width: 75%;
+  margin: 0 auto;
+  padding-top: 10px;
+}
+
+h1{
+  text-align: center;
+
+}

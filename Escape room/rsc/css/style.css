@@ -1,0 +1,65 @@
+
+body{
+    background-color: lightgray;
+}
+
+h1{
+    font-size: 60px;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.menu{
+    background-color: rgba(128, 128, 128, 0.644);
+    height: 75%;
+    margin: 0 auto;
+    width: 80%;
+    border-radius: 10px;
+    border: 1px solid black;
+}
+
+button{
+    background-color: black;
+    color: white;
+    width: 40%;
+    height: 25%;
+    margin-inline: 30%;
+    margin-top: 5vh;
+    border: 0px solid black;
+    font-size: larger;
+    font-family: 'Times New Roman', Times, serif;
+    border-radius: 5px;
+}
+
+button:hover{
+    cursor:pointer;
+ 
+}
+
+label{
+    font-size: 3vh;
+    font-weight: bold;
+    margin-inline: 25%;
+    
+}
+
+input{
+    width: 50%;
+    border-radius: 3px;
+    font-size: 2vh;
+    font-weight: bold;
+    margin-inline: 25%;
+    margin-top: 4vh;
+}
+
+input.invalid {
+    border: 2px solid red;
+}
+
+#mensaje{
+    text-align: center;
+    font-size: larger;
+    font-weight: bolder;
+}
