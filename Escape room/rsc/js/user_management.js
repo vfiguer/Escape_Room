@@ -1,7 +1,5 @@
 const mensajeElement = document.getElementById('mensaje');
-
-  // Abrir o crear la base de datos
-  const request = indexedDB.open("UsuariosDB", 1);
+const request = indexedDB.open("UsuariosDB", 1);
 
   request.onupgradeneeded = function(event) {
     const db = event.target.result;

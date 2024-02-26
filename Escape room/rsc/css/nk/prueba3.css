@@ -1,0 +1,28 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+  }
+
+  #game-container {
+    text-align: center;
+  }
+
+  .color-button {
+    width: 80px;
+    height: 80px;
+    margin: 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+  }
+
+  #message {
+    margin-top: 20px;
+    font-size: 18px;
+  }
