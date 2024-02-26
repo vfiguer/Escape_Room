@@ -138,114 +138,107 @@ function submitExam() {
 
   //prueba 3
 
-  document.addEventListener("DOMContentLoaded", function () {
-    if (window.location.href.includes("nk/prueba3.html")) {
-      const colors = ['red', 'green', 'blue', 'yellow', 'magenta', 'cyan', 'orange', 'purple', 'lime'];
-      let sequence = [];
-      let playerSequence = [];
-      let round = 1;
-      let messageElement = document.getElementById('message');
-      let isPlayerTurn = false;
+  const colors = ['red', 'green', 'blue', 'yellow', 'magenta', 'cyan', 'orange', 'purple', 'lime'];
+let sequence = [];
+let playerSequence = [];
+let round = 1;
+let messageElement;
+function startGame() {
+  sequence = [];
+  playerSequence = [];
+  round = 1;
+  isPlayerTurn = false;
+  resetColors(); 
+  nextRound();
+}
+
+function nextRound() {
+  showMessage('Round ' + round);
   
-      function startGame() {
-        sequence = [];
-        playerSequence = [];
-        round = 1;
-        isPlayerTurn = false;
-        resetColors(); // Resetea los colores al inicio
-        nextRound();
-      }
-  
-      function nextRound() {
-        showMessage('Round ' + round);
-        if (round === 1) {
-          showMessage('Calibración');
-        }
-        addToSequence();
-        playSequence();
-      }
-  
-      function addToSequence() {
-        const randomColorIndex = Math.floor(Math.random() * colors.length);
-        sequence.push(randomColorIndex);
-      }
-  
-      function playSequence() {
-        const illuminationTime = round === 1 ? 2000 : 1500 / round; // Calibración en la primera ronda
-        const intervalTime = round === 1 ? 2000 : 1500 / round;
-        isPlayerTurn = false;
-  
-        for (let i = 0; i < round; i++) {
-          setTimeout(() => illuminateColor(sequence[i], i === round - 1), i * intervalTime);
-        }
-  
-        setTimeout(() => {
-          showMessage('Tu turno');
-          isPlayerTurn = true;
-        }, round * intervalTime);
-      }
-  
-      function illuminateColor(index, isLast) {
-        const colorButton = document.getElementsByClassName('color-button')[index];
-        colorButton.style.backgroundColor = colors[index];
-  
-        setTimeout(() => {
-          resetColor(colorButton);
-          if (isLast) {
-            isPlayerTurn = true;
-          }
-        }, 500);
-      }
-  
-      function resetColor(button) {
-        button.style.backgroundColor = 'gray';
-      }
-  
-      function resetColors() {
-        const colorButtons = document.getElementsByClassName('color-button');
-        for (let i = 0; i < colorButtons.length; i++) {
-          colorButtons[i].style.backgroundColor = 'gray';
-        }
-      }
-  
-      window.checkColor = function(index) {
-        if (isPlayerTurn) {
-          const selectedColor = index;
-          playerSequence.push(selectedColor);
-          illuminateColor(selectedColor, playerSequence.length === round);
-  
-          const correct = checkSequence();
-          if (correct) {
-            if (playerSequence.length === round) {
-              playerSequence = [];
-              round++;
-              setTimeout(nextRound, 1000);
-            }
-          } else {
-            showMessage('¡Has perdido! Presiona "Comenzar" para jugar de nuevo.');
-          }
-        }
-      }
-  
-      function checkSequence() {
-        for (let i = 0; i < playerSequence.length; i++) {
-          if (playerSequence[i] !== sequence[i]) {
-            return false;
-          }
-        }
-        return true;
-      }
-  
-      function showMessage(msg) {
-        messageElement.textContent = msg;
-      }
-  
-      const startButton = document.createElement('button');
-      startButton.textContent = 'Comenzar';
-      startButton.addEventListener('click', startGame);
-      document.body.appendChild(startButton);
-  
-      resetColors();
+  addToSequence();
+  playSequence();
+}
+
+function addToSequence() {
+  const randomColorIndex = Math.floor(Math.random() * colors.length);
+  sequence.push(randomColorIndex);
+}
+
+function playSequence() {
+  const intervalTime = round === 1 ? 3000 : 2000 / round;
+  isPlayerTurn = false;
+
+  for (let i = 0; i < round; i++) {
+    setTimeout(() => illuminateColor(sequence[i], i === round - 1), i * intervalTime);
+  }
+
+  setTimeout(() => {
+    showMessage('Tu turno');
+    isPlayerTurn = true;
+  }, round * intervalTime);
+}
+
+function illuminateColor(index, isLast) {
+  const colorButton = document.getElementsByClassName('color-button')[index];
+  colorButton.style.backgroundColor = colors[index];
+
+  setTimeout(() => {
+    resetColor(colorButton);
+    if (isLast) {
+      isPlayerTurn = true;
     }
-  });
+  }, 250);
+}
+
+function resetColor(button) {
+  button.style.backgroundColor = 'gray';
   
+}
+
+function resetColors() {
+  const colorButtons = document.getElementsByClassName('color-button');
+  for (let i = 0; i < colorButtons.length; i++) {
+    colorButtons[i].style.backgroundColor = 'gray';
+  }
+}
+
+window.checkColor = function(index) {
+  if (isPlayerTurn) {
+    const selectedColor = index;
+    playerSequence.push(selectedColor);
+    illuminateColor(selectedColor, playerSequence.length === round);
+
+    const correct = checkSequence();
+    if (correct) {
+      if (playerSequence.length === round) {
+        playerSequence = [];
+        round++;
+        setTimeout(nextRound, 1000);
+      }
+    } else {
+      showMessage('¡Has perdido! Presiona "Comenzar" para jugar de nuevo.');
+    }
+  }
+}
+
+function checkSequence() {
+  for (let i = 0; i < playerSequence.length; i++) {
+    if (playerSequence[i] !== sequence[i]) {
+      return false;
+    }
+  }
+  return true;
+}
+
+function showMessage(msg) {
+  messageElement.textContent = msg;
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  if (window.location.href.includes("nk/prueba3.html")) {
+    messageElement = document.getElementById('message');
+
+    
+    resetColors();
+  }
+});

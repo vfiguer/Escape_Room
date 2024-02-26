@@ -8,19 +8,23 @@
 
 </head>
 <body>
-    <div id="game-container">
-        <button class="color-button" onclick="checkColor(0)"></button>
-        <button class="color-button" onclick="checkColor(1)"></button>
-        <button class="color-button" onclick="checkColor(2)"></button>
-        <button class="color-button" onclick="checkColor(3)"></button>
-        <button class="color-button" onclick="checkColor(4)"></button>
-        <button class="color-button" onclick="checkColor(5)"></button>
-        <button class="color-button" onclick="checkColor(6)"></button>
-        <button class="color-button" onclick="checkColor(7)"></button>
-        <button class="color-button" onclick="checkColor(8)"></button>
-        <div id="message"></div>
-      </div>
-      
+    <p>Pulsa los colores en el orden</p>
+    <div class="grid" id="grid">
+        <div class="color-button" onclick="checkColor(0)"></div>
+        <div class="color-button" onclick="checkColor(1)"></div>
+        <div class="color-button" onclick="checkColor(2)"></div>
+        <div class="color-button" onclick="checkColor(3)"></div>
+        <div class="color-button" onclick="checkColor(4)"></div>
+        <div class="color-button" onclick="checkColor(5)"></div>
+        <div class="color-button" onclick="checkColor(6)"></div>
+        <div class="color-button" onclick="checkColor(7)"></div>
+        <div class="color-button" onclick="checkColor(8)"></div>
+
+    </div>
+
+    <button onclick="startGame()">Iniciar Juego</button>      
+    <div id="message"></div>
+
 </body>
 <script src="../../js/nk.js"></script>
 
