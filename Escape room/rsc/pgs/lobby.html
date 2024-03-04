@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/lobby.css"/>
+
+</head>
+<body>
+    
+    <div class="menu">
+        <div class="menu-content">
+            <div class="menu-left">
+                <p class="titulo">Five nights at Freddy's(WIP)</p>
+                <img src="../img/freddy.jpg">
+            </div>
+            <div class="menu-right">
+                <p class="titulo"><a href="nk.html">Escape de Corea del Norte</a></p>
+                <a href="nk.html"><img src="../img/NK.png"></a>
+            </div>
+        </div>
+        <p><button onclick="gestionar()">Gestionar</button>
+        <button onclick="mostrarRanking()">Ranking</button>
+        <button onclick="cargarPartida()">Cargar </button>
+        <button onclick="cerrarSesion()">Cerrar Sesión</button>
+    </p>
+
+        <ul id="ranking-list"></ul>
+
+        <div class="gestionar" style="display: none;">
+            <h2>Gestionar Usuario</h2>
+            <form id="userForm">
+                <p>
+                <label for="newUsername">Nuevo Nombre de Usuario:</label>
+                <input type="text" id="newUsername" name="newUsername">
+                </p>
+                <p></p>
+                <label for="newPassword">Nueva Contraseña:</label>
+                <input type="password" id="newPassword" name="newPassword">
+            </p>
+                <button type="button" onclick="updateUserInfo()">Actualizar</button>
+                <p id="mensaje"></p>
+
+            </form>
+        </div>
+    </div>
+</body>
+<script src="../js/user_management.js"></script>
+</html>

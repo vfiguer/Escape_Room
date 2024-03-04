@@ -1,0 +1,75 @@
+22/01/2024
+
+Inicio del proyecto, lluvia de ideas
+
+23/01/2024
+
+comienzo la estructura del log-in y registro
+
+24/01/2024
+
+acavo el log-in y paso a hacer el lobby
+
+29/01/2024
+
+comienzo el primer minijuego de NK
+
+30/01/2024
+
+hacer el css de NK y sigo haciendo el minijuego
+
+31/01/2024
+
+acabo el primer minijuego
+
+05/02/2024
+
+comienzo a hacer el memory
+
+06/02/2024
+
+acabo el memory
+
+07/02/2024
+
+busco informacion para mas minijuegos
+
+12/02/2024
+
+arreglos en la interfaz
+
+13/02/2024
+
+Comienzo el simon dice
+
+14/02/2024
+
+Simon dice
+
+19/02/2024
+
+hago las funciones de gestion y ranking en el lobby
+
+20/02/2024
+
+trabajo en fnaf
+
+21/02/2024
+
+rabajo en fnaf
+
+26/02/2024
+
+intento seguir el segundo escape room, no me dara tiempo lo cancelo
+
+27/02/2024
+
+acabo el simon dice
+
+28/02/2024
+
+acabo el css del simon dice
+
+03/03/2024
+
+Testing y arreglo de errores, creacion de documentacion
