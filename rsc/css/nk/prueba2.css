@@ -1,0 +1,77 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: darkgreen;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+}
+
+.tablero {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: rgba(0, 0, 0, 0.26);
+  width: 1000px;
+}
+
+.carta {
+  border-radius: 8px;
+  margin: 10px;
+  padding: 10px;
+  width: 100px;
+  height: 150px;
+  text-align: center;
+  cursor: pointer;
+  perspective: 1000px;
+  transition: transform 0.5s;
+}
+
+.carta.flipped {
+  transform: rotateY(180deg);
+}
+
+.carta img {
+  max-width: 100%;
+  border-radius: 4px;
+  width: 100%;   height: 100%;
+}
+
+.carta .back {
+  display: none;
+}
+
+.carta.flipped .front {
+  display: none;
+}
+
+.carta.flipped .back {
+  display: block;
+}
+
+.carta.guessed{
+  pointer-events: none;
+  transform: rotateY(180deg);
+}
+
+
+.carta.guessed .front {
+  display: none;
+}
+
+.carta.guessed .back {
+  display: block;
+}
+
+.mensaje{
+  width: 100%;
+  color: white;
+  font-size: 20pt;
+  text-align: center;
+  height: 40px;
+}

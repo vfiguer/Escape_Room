@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+body{
+    background-color: #D7DEDC;
+}
+*{
+    font-family: 'Poppins';
+}
+h1{
+    font-size: 50px;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.menu{
+    background-color: #CFCFCD;
+    height: 75%;
+    margin: 0 auto;
+    width: 60%;
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, 0);
+    margin-top: 150px;
+    padding-bottom: 100px;
+    box-shadow: 0px 0px 20px #00000041;
+}
+
+button{
+    background-color: #2E4052;
+    color: white;
+    width: 40%;
+    height: 25%;
+    margin-inline: 30%;
+    margin-top: 5vh;
+    font-size: larger;
+    border-radius: 5px;
+}
+
+button:hover{
+    cursor:pointer;
+    transition: 0.4s;
+    background-color: #1e2a36;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    font-weight: bold;
+    box-shadow: 0px 0px 20px #00000041;
+
+}
+
+.campo{
+    padding-bottom: 30px;
+}
+label{
+    font-size: x-large;
+    font-weight: bold;
+    margin-inline: 25%;
+    margin-top: 3vh;
+}
+
+input{
+    width: 50%;
+    border-radius: 3px;
+    font-size: 2vh;
+    font-weight: bold;
+    margin-inline: 25%;
+}
+
+input.invalid {
+    border: 2px solid red;
+}
+
+#mensaje{
+    text-align: center;
+    font-size: larger;
+    font-weight: bolder;
+}
