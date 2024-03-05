@@ -28,6 +28,12 @@
         const username = localStorage.getItem('currentUsername'); 
         const tiempo = localStorage.getItem('timer');
         const clues = localStorage.getItem('clues')
+        if(tiempo== null || tiempo == 0){
+            window.location.href = '../lobby.html';
+            console.log("hola")
+        }else{
+            console.log("adios")
+
         let puntuacion = 1000 - tiempo - clues*100
 
         let minutos = Math.trunc(tiempo/60)
@@ -42,6 +48,7 @@
         localStorage.setItem('timer', '0');
         localStorage.setItem('clues', '0')
         localStorage.setItem('ultimaUbicacion', '0')
+        }
     });
 </script>
 </div>

@@ -346,20 +346,6 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
-document.addEventListener("DOMContentLoaded", function () {
-
-if (window.location.href.includes("win.html")) {
-  const timer = parseInt(localStorage.getItem('timer')) || 0;
-  const username = localStorage.getItem('currentUsername');
-
-  if (username && timer) {
-    const ranking = JSON.parse(localStorage.getItem('ranking')) || [];
-    ranking.push({ username, tiempo: timer });
-    localStorage.setItem('ranking', JSON.stringify(ranking));
-  }
-}
-//al llegar a la pagina de victoria se reinician los valores de LocalStarage y se guardan los datos en un localStorafe de Ranking
-})
 
 document.addEventListener('DOMContentLoaded', function () {
   const ultimaUbicacion = window.location.pathname;
