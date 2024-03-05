@@ -25,7 +25,7 @@ function registrarUsuario() {
       mostrarMensaje('Registro exitoso.');
       localStorage.setItem('currentUsername', username);
 
-      window.location.href = "./lobby.html";
+      window.location.href = "/rsc/pgs/lobby.html";
     }
   } else {
     mostrarMensaje('Por favor, ingresa un nombre de usuario y una contraseña.');
