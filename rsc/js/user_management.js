@@ -59,16 +59,16 @@ function iniciarSesion() {
 
 function checkSession() {
   const username = localStorage.getItem('currentUsername');
-  const isLoginPage = window.location.pathname.includes("/pgs/login.html");
+  const isLoginPage = window.location.pathname.includes("/pgs/index.html");
 
   if (!username && !isLoginPage) {
-    window.location.href = '../pgs/login.html';
+    window.location.href = '../pgs/index.html';
   }
 }
 
 function cerrarSesion() {
   localStorage.removeItem('currentUsername');
-  window.location.href = '../pgs/login.html'; 
+  window.location.href = '../pgs/index.html'; 
 }
 
 document.addEventListener('DOMContentLoaded', function () {

@@ -356,7 +356,7 @@ document.addEventListener('DOMContentLoaded', function () {
   
   const username = localStorage.getItem('currentUsername');
   if (!username) {
-    window.location.href = '../login.html';
+    window.location.href = '../index.html';
   }
   //funcion que se activa al inicio de cada pagina que guarda la ubicacion y el username que te permitira cargarlo despues
 });
