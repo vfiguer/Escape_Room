@@ -58,12 +58,12 @@ function submitExam() {
     document.getElementById('processingOverlay').style.display = 'none';
     //escondemos el overlay
     if (score >= 6) {
-      window.location.replace("historia2.html");
+      window.location.replace("/rsc/pgs/nk/historia2.html");
       //cambiamos la pestaña a la siguiente parte de la historia
       localStorage.setItem('clues', usedClues)
       //pasamos las pistas usadas al localStorage
     } else {
-      window.location.replace("../nk/GO/GO2.html");
+      window.location.replace("/rsc/pgs/nk/GO/GO2.html");
       //si fallamos se nos llevara a la primera pantalla de final de juego
     } 
   }, 2000);
@@ -179,7 +179,7 @@ function comprobar() {
     //cogemos la cantidad de cartas que hay y cuantas han sido adivinadas
 
     if (allCards.length === guessedCards.length) {
-      window.location.replace("historia3.html");
+      window.location.replace("/rsc/pgs/nk/historia3.html");
     }
     //si todas han sido adivinadas pasamoss a la siguiente historia
 
@@ -300,7 +300,7 @@ function checkColor(index) {
         //se vacia el array del usuario y se aumenta la ronda
         setTimeout(nextRound, 1000);
         if (round === 9) {
-          window.location.replace("../nk/win.html");
+          window.location.replace("/rsc/pgs/nk/win.html");
         }
         //al alcanzar la ruta 9 se lleva a la pantalla de victoria
       }
@@ -315,7 +315,7 @@ function checkColor(index) {
         showMessage('Esta es tu ultima oportunidad');
       }
       if (fallos === 3) {
-        window.location.replace("../nk/GO/GO3-2.html");
+        window.location.replace("/rsc/pgs/nk/GO/GO3-2.html");
       }
       fallos++;
       //si no, se comienza a aumentar la cantidad de fallos
